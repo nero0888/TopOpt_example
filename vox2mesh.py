@@ -7,7 +7,7 @@ from skimage import measure
 
 
 ### load structure data using np.loadtxt
-op_str = # complete the code here
+op_str = np.loadtxt('results/op_structure.txt')
 
 ### preprocessing the data
 
@@ -39,7 +39,7 @@ ax.set_zlim(0, 5)
 ax.set_aspect('equal', adjustable='box')
 plt.tight_layout()
 plt.show()
-fig.savefig("./results/final_structure_mesh.jpg")
+fig.savefig("./resultsfinal_structure_mesh.jpg")
 
 mesh = trimesh.Trimesh(vertices=verts, faces=faces)
 mesh.export("./results/final_structure.stl")
